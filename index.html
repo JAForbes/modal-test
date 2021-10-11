@@ -19,6 +19,8 @@
       display: grid;
       width: 100vw;
       height: 100vh;
+      max-height: 100vh;
+      max-height: -webkit-fill-available;
       position: fixed;
       top: 0px;
       left: 0px;
@@ -28,6 +30,7 @@
       align-content: center;
       --w: 100%;
       --h: 100%;
+/*       --h: -webkit-fill-available; */
     }
     
     @media ( min-width: 65em ) {
@@ -75,7 +78,7 @@
       </div>
       <div class="content">
         <p>
-          This is the amazing content 100% without webkit fill available, and no max heights
+          Bring it back
         </p>
         <button>
           Here is a button
