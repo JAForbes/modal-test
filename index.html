@@ -14,7 +14,8 @@
 			overscroll-behavior-y: contain;
       margin: 0em;
 		}
-    
+		
+    body { position: fixed; height: 100% }
     .modal-stack {
       display: grid;
       width: 100vw;
@@ -81,6 +82,7 @@
         </button>
       </div>
       <div class="content">
+	<p>Body, position fixed hack</p>
         <p>
           Height 100%, with --webkit for height and max-height, without 100vh as a fallback + lorem ipsum with white text (an attempt to break 100%)
         </p>
