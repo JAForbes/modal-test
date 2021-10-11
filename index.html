@@ -14,19 +14,15 @@
 			overscroll-behavior-y: contain;
       margin: 0em;
 		}
-		
-    body { 
-	position: absolute;
-	height: 100%;
-	overflow-y: auto;
-    }
+	
     .modal-stack {
       display: grid;
       width: 100vw;
 /*       height: 100vh; */
-      height: -webkit-fill-available;
+      height: 100%;
+/*       height: -webkit-fill-available; */
 /*       max-height: 100vh; */
-      max-height: -webkit-fill-available;
+/*       max-height: -webkit-fill-available; */
       position: fixed;
       top: 0px;
       left: 0px;
@@ -86,13 +82,11 @@
         </button>
       </div>
       <div class="content">
-	<p>Body, position absolute hack + overflow-y</p>
-        <p>
-          Height 100%, with --webkit for height and max-height, without 100vh as a fallback + lorem ipsum with white text (an attempt to break 100%)
+	<p>
+          Height 100%, without --webkit for height and no max-height + lorem ipsum (an attempt to break 100%)
         </p>
-	<p>I thought fill available was no longer supported by Chrome because a Stack Overflow commenter said so (😀)</p>
-	<p>But for this usage it is <a href="https://caniuse.com/?search=fill-available"> pretty well supported</a> </p>
-	<p>In my tests, at the time of writing, it is necessary to not have occluded content for modals/etc</p>
+	<p>Trying without fill-available because when the height changes from nav disappearing I can see a vertical gap (temporarily while scrolling on Chrome and permanently on iOS)</p>
+	<p>This may not work, but I've seen that 100% height will "always" fill the available space on a Chrome dev blog, so let's see if that is true.</p>
         <button>
           Here is a button
         </button>
