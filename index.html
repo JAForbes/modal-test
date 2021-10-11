@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<style>
+		html,
+		body {
+			background-color: black;
+			/* https://developers.google.com/web/updates/2017/11/overscroll-behavior */
+			overscroll-behavior-y: contain;
+      margin: 0em;
+		}
+    
+    .modal-stack {
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      grid-template-columns: var(--w);
+      grid-template-rows: var(--h);
+      justify-content: center;
+      align-content: center;
+      --w: 100%;
+      --h: 100%;
+    }
+    
+    @media ( min-width: 65em ) {
+      .modal-stack {
+        --w: 60em;
+        --h: 80vh;
+      }
+    }
+    .modal-stack .nav h1 {
+      font-size: 1em;
+      margin: 0em;
+    }
+    .modal-item {
+      background-color: white;
+      padding: 1em;
+      display: grid;
+      background-color: pink;
+      display: grid;
+      grid-template-rows: 3em 1fr;
+    }
+    .modal-item .nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    .modal-item .content {
+      display: grid;
+      align-content: space-between;
+    }
+	</style>
+</head>
+
+<body class="">
+  <div class="modal-stack">
+    <div class="modal-item">
+      <div class="nav">
+        <button>
+          Back
+        </button>
+        <h1>
+          Heading
+        </h1>
+        <button>
+          Next
+        </button>
+      </div>
+      <div class="content">
+        <p>
+          This is the amazing content
+        </p>
+        <button>
+          Here is a button
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
