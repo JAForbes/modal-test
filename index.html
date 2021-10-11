@@ -15,6 +15,13 @@
       margin: 0em;
 		}
 	
+		body {
+			position: fixed;
+			height: 100%;
+		}
+		
+		
+		
     .modal-stack {
       display: grid;
       width: 100vw;
@@ -63,6 +70,8 @@
     }
     .lorem {
       color: white;
+			height: 100vh;
+			overflow-y: auto;
     }
 	</style>
 </head>
@@ -82,9 +91,8 @@
         </button>
       </div>
       <div class="content">
-	<p>
-          Height 100%, without --webkit for height and no max-height + lorem ipsum (an attempt to break 100%)
-        </p>
+				<p>Trying position fixed on body again, with overflow on lorem</p>
+				<p>The theory is, the browser does not recalculate 100% on fixed elements while scrolling, but maybe that is only on page scroll not container scroll? (🤞)</p>
 	<p>Trying without fill-available because when the height changes from nav disappearing I can see a vertical gap (temporarily while scrolling on Chrome and permanently on iOS)</p>
 	<p>This may not work, but I've seen that 100% height will "always" fill the available space on a Chrome dev blog, so let's see if that is true.</p>
         <button>
